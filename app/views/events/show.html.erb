@@ -30,10 +30,14 @@
   <%= @event.capacity %>
 </p>
 
+
 <p>
   <strong>User:</strong>
+  <%= image_tag @event.user.avatar.url(:thumb) %>
   <%= @event.user.name %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
