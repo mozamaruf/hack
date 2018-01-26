@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sport: MyString
+  datetime: 2018-01-27 01:13:26
+  location: MyString
+  coordinates: MyString
+  description: MyString
+  capacity: 1
+  user_id: 
+
+two:
+  sport: MyString
+  datetime: 2018-01-27 01:13:26
+  location: MyString
+  coordinates: MyString
+  description: MyString
+  capacity: 1
+  user_id: 
