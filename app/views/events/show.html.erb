@@ -1,43 +1,99 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <title>Home</title>
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+  <!-- Proxima Nova-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <!-- animate -->
+  <script src="https://use.fontawesome.com/47a7c6d863.js"></script>
+</head>
 
-<p>
-  <strong>Sport:</strong>
-  <%= @event.sport %>
-</p>
-
-<p>
-  <strong>Datetime:</strong>
-  <%= @event.datetime %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Coordinates:</strong>
-  <%= @event.coordinates %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Capacity:</strong>
-  <%= @event.capacity %>
-</p>
-
-
-<p>
-  <strong>User:</strong>
-  <%= image_tag @event.user.avatar.url(:thumb) %>
-  <%= @event.user.name %>
-</p>
+<body style="background-color:#fbfbfb;">
 
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+
+  <div class="animated FadeIn" > <!-- ########## Slide-in Animation Div ########### -->
+
+
+  <div class="row" style="height:20%;margin-bottom:1em;">  <!-- ########## What Kind Text ########### -->
+
+    <h2 style="font-size:3em;font-weight:800;white-space: nowrap;text-align:center;" class="animated FadeIn" >Basketball<span style="color:#ff5b5b;padding-left:5px;">.</span></h2>
+    <h4 style="font-size:1.6em;white-space: nowrap;text-align:center;margin-top:-10px;color:#aaaaaa;" class="animated FadeIn" >HBKU Student Center</span></h4>
+
+  </div>
+
+</div>
+
+  <div class="row" style="margin-left:21%;">  <!-- ########## Buttons ########### -->
+
+
+
+  <div class="row" style="margin-left:0.3%;">
+
+
+      <!--
+      <button class="btn btn-default" style="border-radius: 15px;margin:1%;margin-right:1.5%;max-width:25%;max-height:15%;box-shadow: 2px 2px 5px #d6d6d6;" id="pitch">
+
+    </button>
+    -->
+
+    <img src="https://image.ibb.co/jn0Pww/23596222_166372933949583_5219923459932422144_n.jpg" class="animated FadeInRight" alt="23596222_166372933949583_5219923459932422144_n" style="box-shadow: 4px 4px 5px #d6d6d6;border-radius: 15px;width:6.5em;height:6.5em;" border="0">
+    <img src="https://image.ibb.co/jn0Pww/23596222_166372933949583_5219923459932422144_n.jpg" class="animated FadeInRight" alt="23596222_166372933949583_5219923459932422144_n" style="box-shadow: 4px 4px 5px #d6d6d6;border-radius: 15px;width:6.5em;height:6.5em;margin-left:2em;" border="0">
+
+
+  </div>
+
+  <div class="row" style="margin-left:0.3%;margin-top:5%;">
+
+
+      <!--
+      <button class="btn btn-default" style="border-radius: 15px;margin:1%;margin-right:1.5%;max-width:25%;max-height:15%;box-shadow: 2px 2px 5px #d6d6d6;" id="pitch">
+
+    </button>
+    -->
+
+    <img src="https://image.ibb.co/jn0Pww/23596222_166372933949583_5219923459932422144_n.jpg" class="animated FadeInRight" alt="23596222_166372933949583_5219923459932422144_n" style="box-shadow: 4px 4px 5px #d6d6d6;border-radius: 15px;width:6.5em;height:6.5em;" border="0">
+    <img src="https://image.ibb.co/jn0Pww/23596222_166372933949583_5219923459932422144_n.jpg" class="animated FadeInRight" alt="23596222_166372933949583_5219923459932422144_n" style="box-shadow: 4px 4px 5px #d6d6d6;border-radius: 15px;width:6.5em;height:6.5em;margin-left:2em;" border="0">
+
+
+  </div>
+
+  <div class="row" style="margin-left:0.3%;margin-top:5%;">
+
+
+      <!--
+      <button class="btn btn-default" style="border-radius: 15px;margin:1%;margin-right:1.5%;max-width:25%;max-height:15%;box-shadow: 2px 2px 5px #d6d6d6;" id="pitch">
+
+    </button>
+    -->
+
+    <img src="https://image.ibb.co/jn0Pww/23596222_166372933949583_5219923459932422144_n.jpg" class="animated FadeInRight" alt="23596222_166372933949583_5219923459932422144_n" style="box-shadow: 4px 4px 5px #d6d6d6;border-radius: 15px;width:6.5em;height:6.5em;" border="0">
+
+
+  </div>
+
+
+
+
+
+  </div>
+  <div class="row" style="text-align:center;">
+    <h2 style="font-size:4em;font-family: 'Roboto', sans-serif;"> 4/5 </h2>
+  </div>
+  
+    <div class="row" style="text-align:center;">
+    <button class="btn btn-success" style="background-color:#ffcc5e;border-color:#ffcc5e;width:20%;border-radius:40px;height:5em;width:5em;" href="http://www.google.com" >
+      <div class="row">
+        <i class="fa fa-plus" style="font-size:2em;" aria-hidden="true"></i>
+      </div>
+
+    </button>
+  </div>
+
+</body>
+

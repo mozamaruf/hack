@@ -1,4 +1,124 @@
-<p id="notice"><%= notice %></p>
+<head>
+    <title>Custom Markers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <!-- Proxima Nova-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- animate -->
+    <script src="https://use.fontawesome.com/47a7c6d863.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+     /* Float shit over the map */
+
+     #over_map { position: absolute; top: 10px; left: 10px; z-index: 99; }
+
+    </style>
+  </head>
+  
+  
+  <body>
+    
+    
+     <div id="map">  </div>
+
+     <div id="over_map">
+       
+        <div class="btn btn-default" style="width:20%;border-radius:40px;height:5em;width:5em;color:#2b2b2b;" href="http://www.google.com" >
+
+            <i class="fa fa-bars" style="font-size:2em;margin-top:32%;" aria-hidden="true"></i>
+
+        </div>
+        
+        <!-- add event buttom -->
+        <div class="btn btn-success" style="background-color:#ffcc5e;border-color:#ffcc5e;width:20%;border-radius:40px;height:5em;width:5em;" href="http://www.google.com" >
+
+            <i class="fa fa-plus" style="font-size:2em;margin-top:32%;" aria-hidden="true"></i>
+
+        </div>
+    
+    </div>
+     
+    
+    
+    
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: new google.maps.LatLng(25.3164447,51.4405631),
+          mapTypeId: 'roadmap',
+          mapTypeControl: false,
+          
+        });
+
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          football: {
+            icon: 'https://image.ibb.co/k85KeG/Soccer_icon.png'
+          },
+          volleyball: {
+            icon: 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/32/Sport-volleyball-icon.png'
+          },
+          basketball: {
+            icon: 'http://icons.iconarchive.com/icons/martin-berube/sport/32/Basketball-icon.png'
+          }
+        };
+
+        var features = [
+          {
+            position: new google.maps.LatLng(25.3161925,51.4396189),
+            type: 'basketball',
+            url: "https://en.wikipedia.org/wiki/Basketball"
+          },{
+            position: new google.maps.LatLng(25.3141364,51.4410781),
+            type: 'football',
+            url: "https://en.wikipedia.org/wiki/Football"
+          },{
+            position: new google.maps.LatLng(25.3153585,51.431744),
+            type: 'volleyball',
+            url: "https://en.wikipedia.org/wiki/Volleyball"
+          }
+        ];
+
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map,
+            url: feature.url
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+            window.open(marker.url);
+          });
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGrLqiEMEB9N0zzv79tDUdhP-8bNznpvg&callback=initMap">
+    </script>
+  </body>
+  
+  
+  
+
+
+
 
 <h1>Listing Events</h1>
 

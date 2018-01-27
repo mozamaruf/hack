@@ -1,0 +1,77 @@
+<head>
+    <title>Custom Markers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <!-- Proxima Nova-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- animate -->
+    <script src="https://use.fontawesome.com/47a7c6d863.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+     /* Float shit over the map */
+
+     #over_map { position: absolute; width:100%; height:100%; top: 10px; left: 10px; z-index: 99; }
+
+    </style>
+  </head>
+  
+  
+  <body>
+    
+    
+     <div id="map"> <img src="http://image.ibb.co/mMKgRw/ghettooverlay.png" alt="ghettooverlay" border="0">  </div>
+
+     <div id="over_map" class="animate FadeInRight">
+       
+       <div class="panel panel-default" style="border-radius:15px;width:70%;height:80%;margin-left:10%;margin-top:5%;">
+  <div class="panel-body">
+    
+    A Basic Panel
+    
+    <div class="row">
+      <div class="col-lg-6">
+                <div class="btn btn-default" style="width:100%;border-radius:15px;height:5em;width:5em;color:#2b2b2b;"  onclick="location.href = 'http:\\www.google.com';" >
+
+            <img src="http://image.ibb.co/fb8Y6w/basketball.png" style="width:100%;height:90%;border-radius:" alt="basketball" border="0">
+
+        </div>
+      </div>
+    
+    </div>
+
+    
+    </div>
+</div>
+
+
+        <div class="btn btn-default" style="width:20%;border-radius:40px;height:5em;width:5em;color:#2b2b2b;"  onclick="location.href = 'http:\\www.google.com';" >
+
+            <i class="fa fa-bars" style="font-size:2em;margin-top:32%;" aria-hidden="true"></i>
+
+        </div>
+        
+        <!-- add event buttom -->
+        <div class="btn btn-success" style="background-color:#ffcc5e;border-color:#ffcc5e;width:20%;border-radius:40px;height:5em;width:5em;" href="http://www.google.com" >
+
+            <i class="fa fa-plus" style="font-size:2em;margin-top:32%;" aria-hidden="true"></i>
+
+        </div>
+    
+    </div>
+     
+    
+  </body>
