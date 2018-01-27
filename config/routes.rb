@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :events
   resources :users
   get "/pages/:page" => "pages#show"
+  get '/join' => 'attendees#join'
+  get '/leave' => 'attendees#leave'
 
   root "events#index"
   

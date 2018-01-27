@@ -14,7 +14,18 @@ class AttendeesController < ApplicationController
 
   # GET /attendees/new
   def new
-    @attendee = Attendee.new
+  end
+  
+  def join
+    attendee = Attendee.create(user_id: 1, event_id: 1)
+    attendee.save
+    redirect_to '/events/1'
+  end
+  
+  def leave
+    attendee = Attendee.find_by(user_id: 1)
+    attendee.destroy
+    redirect_to '/events/1'
   end
 
   # GET /attendees/1/edit
@@ -54,11 +65,7 @@ class AttendeesController < ApplicationController
   # DELETE /attendees/1
   # DELETE /attendees/1.json
   def destroy
-    @attendee.destroy
-    respond_to do |format|
-      format.html { redirect_to attendees_url, notice: 'Attendee was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    
   end
 
   private
